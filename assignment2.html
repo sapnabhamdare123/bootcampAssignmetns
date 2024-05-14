@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            position: relative;
+            left: 550px;
+        }
+
+        .box1{
+            width: 300px;
+            height: 300px;
+            border: 2px solid rgb(8, 8, 8);
+            margin: 20px;
+        }
+        #btn{
+            position: relative;
+            left: 700px;  
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box1"></div>
+    </div>
+    <button id="btn">button1</button>
+    <script>
+        let box = document.querySelector(".box1");
+        let button = document.getElementById("btn");
+
+        let colors = ["red","pink","green","orange","blue","black","yellow","deeppink","powderblue"];
+        let colorsIndex = 0;
+
+        button.addEventListener("click", () => {
+            box.style.backgroundColor = colors[colorsIndex];
+            colorsIndex = colorsIndex + 1;
+            if(colorsIndex >=colors.length){
+                colorsIndex = 0;
+            } 
+        })
+    </script>
+</body>
+</html>

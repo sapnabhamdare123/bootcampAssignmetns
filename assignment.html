@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: rgb(224, 223, 222);
+        }
+        form{
+            text-align: center;
+            margin-top:50px;
+        }
+        button:hover{
+            background-color: rgb(38, 140, 38);
+        }
+        button {
+            margin-left: 50px;
+        }
+        #indicator{
+           text-align: center;
+           margin-top: 30px;
+
+        }
+    </style>
+</head>
+<body>
+    <form >
+        <label for="Username">Username</label>
+        <input type="text" placeholder="Enter your Email ID.." id="username" name="username">
+        <br><br>
+        <label for="password">password</label>
+        <input type="password" id="password" name="password" placeholder="Enter your Password..">
+        <br><br>
+        <button type="button" id="btn">Submmit</button>
+    </form>
+    <div id="indicator">
+
+    </div>
+    <script>
+       let button = document.getElementById("btn");
+       let divtag = document.getElementById("indicator")
+
+       button.addEventListener("click",  () => {
+        let username = document.getElementById("username").value;
+        let password = document.getElementById("password").value;
+        
+        divtag.innerHTML = `Username :  ${username} <br> <br> Password : ${password} `
+       })
+    </script>
+</body>
+</html>
