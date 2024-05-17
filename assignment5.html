@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <input type="text" placeholder="Enter any Sentence" id="input">
+        <button id="btn">Captilize</button>
+    </div>
+
+    <div id="output">
+    <script>
+        let input = document.getElementById("input");
+        let btn = document.getElementById("btn");
+        let output = document.getElementById("output");
+
+        btn.addEventListener("click",() => {
+            let inputValue = input.value;
+            let CaptilizeString = Captilize(inputValue);
+            output.textContent = CaptilizeString
+        })
+        function Captilize(str){
+            let s = " ";
+            for(let i=0; i<str.length; i++)
+            {
+                if(i==0 || str[i - 1] == " "){
+                    s = s + str[i].toUpperCase();
+                }
+                else {
+                    s = s + str[i];
+                }
+            }
+            return s;
+        }
+    </script>
+</body>
+</html>
